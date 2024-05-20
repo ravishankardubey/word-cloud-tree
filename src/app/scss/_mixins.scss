@@ -1,0 +1,40 @@
+@import './variables';
+
+/* Media Queries */
+@mixin mobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+/** Responsive Layout */
+@mixin content {
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+
+    @include mobile() {
+        padding: 2rem 1rem;
+    }
+
+    @include tablet() {
+        padding: 3rem 1.5rem;
+    }
+}
+
+/** Background style */
+@mixin dotted-background($color: black, $size: 40px) {
+    background-image: radial-gradient($color 1px, transparent 0);
+    background-size: $size $size;
+}

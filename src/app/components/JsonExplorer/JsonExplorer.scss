@@ -1,0 +1,74 @@
+@import '../../scss/variables';
+
+.json-explorer-container {
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+
+    .node {
+        padding: 15px 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: solid 2px #475872;
+        background-color: #2b2c3e;
+        width: fit-content;
+        cursor: pointer;
+
+        .key {
+            color: #59b8ff;
+        }
+
+        .value {
+            color: #dce5e7;
+        }
+
+        &:hover {
+            border-color: #a5a9e2;
+        }
+
+        &.active {
+            border-color: #87A922;
+            background-color: #114232;
+        }
+    }
+
+    .list {
+        list-style-type: disclosure-closed;
+
+        .item {
+            margin: 15px 0;
+
+            &.no-type {
+                list-style-type: none;
+            }
+
+            &.closed {
+                list-style-type: disclosure-closed;
+            }
+
+            &.opened {
+                list-style-type: disclosure-open;
+            }
+        }
+
+        // .beak {
+        //     width: 0; 
+        //     height: 0; 
+        //     border-top: 15px solid transparent;
+        //     border-bottom: 15px solid transparent;
+        //     border-left: 15px solid #475872;
+
+        //     &.active {
+        //         border-left-color: #87A922;
+        //     }
+        //   }
+
+        &.opened {
+            list-style-type: disclosure-open;
+        }
+
+        &.closed {
+            list-style-type: disclosure-closed;
+        }
+    }
+}

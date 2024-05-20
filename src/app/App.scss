@@ -1,0 +1,46 @@
+@import './scss/variables';
+@import './scss/mixins';
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $card;
+  color: $primary;
+  display: flex;
+  flex-wrap: wrap;
+  @include content;
+
+  .tree-wrapper {
+    width: 50%;
+    // border-right: solid 2px $accent;
+    box-sizing: border-box;
+  }
+
+  .word-cloud-wrapper {
+    width: 50%;
+  }
+
+  .json-viewer {
+    margin-top: 3rem;
+    width: 100%;
+    overflow: auto;
+    background-color: $card-light;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 500px;
+  }
+
+  @include mobile {
+
+    // flex-direction: column-reverse;
+    .tree-wrapper {
+      width: 100%;
+      // border-right: none;
+    }
+
+    .word-cloud-wrapper {
+      width: 100%;
+    }
+
+  }
+}
